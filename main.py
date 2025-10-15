@@ -59,12 +59,12 @@ photozip = 'https://envs.sh/cD_.jpg'
 
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/inventor_king_09")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="Contact📞", url="https://t.me/SmartBoy_ApnaMS")]])
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="🛠️ Chanel", url="https://t.me/+RZDBATzxxTgxMDZl"),
-            InlineKeyboardButton(text="🛠️ help", url="https://t.me/inventor_king_09"),
+            InlineKeyboardButton(text="Channel😍", url="https://t.me/NEET_Saathi"),
+            InlineKeyboardButton(text="Help🛠️", url="https://t.me/SmartBoy_ApnaMS"),
         ],
     ]
 )
@@ -150,7 +150,7 @@ async def cookies_handler(client: Client, m: Message):
     except Exception as e:
         await m.reply_text(f"⚠️ An error occurred: {str(e)}")
 
-@bot.on_message(filters.command(["t2t"]))
+@bot.on_message(filters.command(["txt"]))
 async def text_to_txt(client, message: Message):
     user_id = str(message.from_user.id)
     # Inform the user to send the text data and its desired file name
@@ -163,13 +163,13 @@ async def text_to_txt(client, message: Message):
     text_data = input_message.text.strip()
     await input_message.delete()  # Corrected here
     
-    await editable.edit("**🔄 Send file name or send /d for filename**")
+    await editable.edit("**🔄 Send file name or send /ms for filename**")
     inputn: Message = await bot.listen(message.chat.id)
     raw_textn = inputn.text
     await inputn.delete()  # Corrected here
     await editable.delete()
 
-    if raw_textn == '/d':
+    if raw_textn == '/ms':
         custom_file_name = 'txt_file'
     else:
         custom_file_name = raw_textn
@@ -186,7 +186,7 @@ async def text_to_txt(client, message: Message):
 UPLOAD_FOLDER = '/path/to/upload/folder'
 EDITED_FILE_PATH = '/path/to/save/edited_output.txt'
 
-@bot.on_message(filters.command(["y2t"]))
+@bot.on_message(filters.command(["yt2t"]))
 async def youtube_to_txt(client, message: Message):
     user_id = str(message.from_user.id)
     
@@ -279,13 +279,13 @@ async def restart_handler(_, m):
         print(f"User ID not in AUTH_USERS", m.chat.id)
         await bot.send_message(
             m.chat.id, 
-            f"<blockquote>__**Oopss! You are not a Premium member**__\n"
+            f"<blockquote>__**Oopss! You are not a Premium member🤡**__\n"
             f"__**PLEASE /upgrade YOUR PLAN**__\n"
             f"__**Send me your user id for authorization**__\n"
             f"__**Your User id** __- `{m.chat.id}`</blockquote>\n\n"
         )
     else:
-        await m.reply_text("🚦**STOPPED**🚦", True)
+        await m.reply_text("🔴**STOPPED**🔴", True)
         os.execl(sys.executable, sys.executable, *sys.argv)
         
 
@@ -295,7 +295,7 @@ async def start(bot, m: Message):
     mention = user.mention
     start_message = await bot.send_message(
         m.chat.id,
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n"
+        f"🌟 Welcome Dear🙈 {m.from_user.first_name}! 🌟\n\n"
     )
 
     await asyncio.sleep(1)
